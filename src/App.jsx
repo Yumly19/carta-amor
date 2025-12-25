@@ -1,5 +1,6 @@
 import { Calendar, Camera, Heart, Music, Stars } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
+import dayjs from 'dayjs';
 
 import corazon from './assets/corazon.jpeg';
 import whatsapp from './assets/WhatsApp-Image.jpeg';
@@ -194,12 +195,13 @@ const useTimeSince = (fecha) => {
   const [hours, setHours] = useState(0);
 
   useEffect(() => {
-    const start = new Date(fecha).getTime();
-    const now = Date.now();
-    const diff = now - start;
+    const start = dayjs(fecha);
+    const now = dayjs();
+    const days = now.diff(start, 'days')
+    const hours = (now.diff(start, 'hours') % 24)
 
-    setDays(Math.floor(diff / 86400000));
-    setHours(Math.floor((diff % 86400000) / 3600000));
+    setDays(days);
+    setHours(hours);
   }, [fecha]);
 
   return { days, hours };
