@@ -2,7 +2,7 @@ import { Calendar, Camera, Heart, Music, Stars } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
 
 import corazon from './assets/corazon.jpeg';
-import whatsapp from './assets/whatsapp-image.jpeg';
+import whatsapp from './assets/WhatsApp-Image.jpeg';
 import enamorados from './assets/enamorados.jpeg';
 import simplesCorazones from './assets/simples-corazones.mp3'
 
@@ -16,14 +16,19 @@ const CONFIG = {
   tituloPrincipal: "Feliz Aniversario",
   fechaAniversario: "2024-12-25",
   cancionEspecial: "Fonseca - Simples Corazones",
-  carta: `Desde el momento en que entraste en mi vida, todo cambió para mejor.
-No necesito un día especial para decirte lo mucho que te amo, pero hoy,
-en nuestro aniversario, quiero recordarte que eres mi persona favorita en el mundo.
+  carta: `Hoy es nuestro aniversario, se escucha muy lindo. Eres la primera persona con la que más he compartido que no lleve mi sangre y es que, aunque a veces difiero, no hay nadie que me conozca más que mi familia pero ahora estás tú, y me atrevo a decir que conoces una parte de mi que ellos no, y es que te he entregado mi mejor versión, sé que no permito que me conozcan cuando estoy mal, o de forma poética se puede decir que no dejo conocer mi corazón, no es por confianza y menos por seguridad en ti, en ese sentido soy afortunada.
 
-Gracias por cada risa, por cada abrazo y por ser mi refugio.
-Espero que este pequeño detalle te saque una sonrisa.
+Y es aquí donde confesaré qué; lo nuestro no empezó conmigo siendo plenamente consciente de mis sentimientos, de hecho diría que solo me gustabas, no había amor, solo me gustaba como me hacías sentir y muy dentro de mi sabía que no quería dejarte pasar como cualquier otra cosa en mi vida y es por eso que, en un atisbo de valentía combinado con mi madre preguntándome a dónde íbamos, decidí hacerte la pregunta, el resto es historia pero fue así como comenzó, yo permitiendo que algo nuevo sucediera y por supuesto brindándote a ti el privilegio de ayudarme a conocer otro yo. 
 
-Te amo hoy y siempre.`,
+Luego de tu pedida y año nuevo, llegó el 25 de enero, un día importante no sólo por nuestro primer mes sino porque fue el día en que me dí cuenta que no sabía qué me sucedía, me sentí abrumada, triste, feliz, nostálgica y no sé qué más no sabía que sentía solo estaba sintiendo y lloré, lloré mucho y por primera vez lo hice frente a mi madre y no porque quería sino porque me desbordaba, los girasoles de aquel entonces fueron testigos de como yo estaba cambiando, porque algo nuevo estaba conmigo y no eran las flores o el frío que hacía esa noche, eran mis sentimientos floreciendo de una forma que no lo habia hecho antes, me dijeron que eso era señal de que me estaba enamorando, pero qué es amar? No lo sé. 
+
+Pero hay algo que si sé, siempre en qué pienso en que puedas dejarme e irte lejos siento que me ahogo, siento que el aire no llega a mis pulmones, mi garganta se cierra y sé que voy a llorar, no quiero volver a estar sola, no quiero estar sin ti y son cosas que no pronuncio porque no quiero ser egoísta y sé que si alguna vez me quieres dejar atrás, lo aceptaré y quizás parezca que no luché porque te quedes pero no es así, es simplemente que no puedo ser la causa de que no seas feliz, no puedo ser quien te obstaculice y si nuestro amor no es para nosotros, está bien, sé que dices muchas cosas de que seré la última pero sé que sin importar qué serás feliz sea o no sea conmigo, ese es mi mayor deseo para ti, quiero que tengas una vida larga y feliz y que ames, ama con locura amistades o lo que sea, abraza la vida con fervor. 
+
+Deseo que te levantes, mires el cielo, escuches alguna canción y logres ver luz, así como alguna vez me pasó a mi cuando más mal me sentía, quiero que sonrías, quiero que alcances todas las metas que siempre me cuentas porque eres alguien así, alguien que quiere crecer y superarse, admiro y envidio eso de ti porque te proyectas como alguien que sabe qué quiere y a dónde quiere llegar, tienes un camino definido y yo solo me dejó llevar, es por eso que muchas veces no nos entendemos pero está bien.
+
+Está bien porque si esto, tu y yo, es para nosotros, lo seremos, y sobre todo si ambos queremos ser nosotros, lo lograremos. Es entonces cuando vuelvo a preguntarme ¿Qué se siente al estar enamorada? Y vuelvo a decir "no lo sé" sé que me gusta cada vez que cruzas el umbral de mi puerta, verte me hace sonreír, el olor de tu aliento sube mi temperatura, eres con quien más sé hablar, quiero reír al rededor tuyo y quiero que estés en todos lados en los que estoy, me siento segura contigo, siento que puedo confiar en tu palabra y accionar, tú cercanía es mi lugar de paz, me gusta abrazarte y sentirte cerca a mi piel e incluso eso en ocasiones no es suficiente, sigues poniéndome nerviosa y sabes sonrojarme, soy inexperta pero estoy dispuesta a aprender todo de ti, amo que me beses y jales hacia tí, amo que agarres mi mano y la beses, amo que beses mi mejilla y mi frente, amo que seas caballeroso, atento y detallista, en fin solo sé que quiero estar contigo, te escojo a ti y solo a ti. Y si me lo vuelves a preguntar no, aún no sé por qué te amo, solo lo hago y lo hago profundamente.
+
+Y así con la misma canción que todo empezó, quiero que hoy también nos acompañe, es por eso que es la que acompaña está carta, Te amo y te agradezco infinitamente todo lo que haces por mi, no merezco todo tu amor pero estoy feliz de tenerlo. Feliz aniversario mi amor, por este y muchos años más.`,
 fotos: [corazon, whatsapp, enamorados],
   firma: "Con todo mi amor, Yuli💗"
 };
@@ -71,7 +76,7 @@ const Header = ({ foto, titulo }) => (
     <div className="absolute inset-0 bg-black/20 z-10" />
     <img src={foto} alt="Principal" className="w-full h-full object-cover" />
     <div className="absolute bottom-0 left-0 w-full p-8 md:p-12 z-20 bg-gradient-to-t from-stone-900/80 to-transparent text-white">
-      <p className="text-rose-200 text-sm uppercase tracking-widest mb-2">Aniversario</p>
+      <p className="text-rose-200 text-sm uppercase tracking-widest mb-2">💑</p>
       <h1 className="text-4xl md:text-6xl font-serif font-bold">{titulo}</h1>
     </div>
   </header>
