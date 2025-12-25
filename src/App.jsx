@@ -4,6 +4,14 @@ import { useEffect, useState, useRef } from 'react';
 import corazon from './assets/corazon.jpeg';
 import whatsapp from './assets/WhatsApp-Image.jpeg';
 import enamorados from './assets/enamorados.jpeg';
+import graduacion from './assets/graduacion.jpeg';
+import imagen1 from './assets/imagen1.jpeg'
+import imagen2 from './assets/imagen2.jpeg'
+import imagen3 from './assets/imagen3.jpeg'
+import imagenFea4 from './assets/imagenFea4.jpeg'
+import imagenFea5 from './assets/imagenFea5.jpeg'
+import imagenFea6 from './assets/imagenFea6.jpeg'
+import imagenAsquerosa7 from './assets/imagenAsquerosa7.jpeg'
 import simplesCorazones from './assets/simples-corazones.mp3'
 
 
@@ -29,7 +37,20 @@ Deseo que te levantes, mires el cielo, escuches alguna canción y logres ver luz
 Está bien porque si esto, tu y yo, es para nosotros, lo seremos, y sobre todo si ambos queremos ser nosotros, lo lograremos. Es entonces cuando vuelvo a preguntarme ¿Qué se siente al estar enamorada? Y vuelvo a decir "no lo sé" sé que me gusta cada vez que cruzas el umbral de mi puerta, verte me hace sonreír, el olor de tu aliento sube mi temperatura, eres con quien más sé hablar, quiero reír al rededor tuyo y quiero que estés en todos lados en los que estoy, me siento segura contigo, siento que puedo confiar en tu palabra y accionar, tú cercanía es mi lugar de paz, me gusta abrazarte y sentirte cerca a mi piel e incluso eso en ocasiones no es suficiente, sigues poniéndome nerviosa y sabes sonrojarme, soy inexperta pero estoy dispuesta a aprender todo de ti, amo que me beses y jales hacia tí, amo que agarres mi mano y la beses, amo que beses mi mejilla y mi frente, amo que seas caballeroso, atento y detallista, en fin solo sé que quiero estar contigo, te escojo a ti y solo a ti. Y si me lo vuelves a preguntar no, aún no sé por qué te amo, solo lo hago y lo hago profundamente.
 
 Y así con la misma canción que todo empezó, quiero que hoy también nos acompañe, es por eso que es la que acompaña está carta, Te amo y te agradezco infinitamente todo lo que haces por mi, no merezco todo tu amor pero estoy feliz de tenerlo. Feliz aniversario mi amor, por este y muchos años más.`,
-fotos: [corazon, whatsapp, enamorados],
+  fotos: [
+    corazon,
+    whatsapp,
+    enamorados,
+    graduacion,
+    imagen1,
+    imagen2,
+    imagen3,
+    imagenFea4,
+    imagenFea5,
+    imagenFea6,
+    imagenAsquerosa7
+  ],
+
   firma: "Con todo mi amor, Yuli💗"
 };
 
@@ -133,9 +154,8 @@ const PhotoGallery = ({ fotos }) => (
       {fotos.map((foto, index) => (
         <div
           key={index}
-          className={`col-span-2 md:col-span-1 rounded-2xl overflow-hidden h-64 shadow-md ${
-            index % 2 === 0 ? 'rotate-1' : '-rotate-1'
-          } hover:rotate-0 transition-transform`}
+          className={`col-span-2 md:col-span-1 rounded-2xl overflow-hidden h-64 shadow-md ${index % 2 === 0 ? 'rotate-1' : '-rotate-1'
+            } hover:rotate-0 transition-transform`}
         >
           <img
             src={foto}
@@ -227,17 +247,17 @@ export default function App() {
   return (
     <div className="min-h-screen bg-stone-50 text-slate-800">
       <BackgroundAudio audioRef={audioRef} src={simplesCorazones} />
-      
+
       <Header foto={CONFIG.fotos[0]} titulo={CONFIG.tituloPrincipal} />
 
       <main className="max-w-3xl mx-auto p-6 md:p-12 -mt-10 relative z-30">
         <SongCard cancion={CONFIG.cancionEspecial} />
         <LoveLetter carta={CONFIG.carta} firma={CONFIG.firma} />
         <PhotoGallery fotos={CONFIG.fotos.slice(1)} />
-        <TimeCounter 
-          fechaAniversario={CONFIG.fechaAniversario} 
-          days={days} 
-          hours={hours} 
+        <TimeCounter
+          fechaAniversario={CONFIG.fechaAniversario}
+          days={days}
+          hours={hours}
         />
 
         <footer className="text-center text-slate-400 text-sm pb-8">
