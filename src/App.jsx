@@ -1,6 +1,12 @@
 import { Calendar, Camera, Heart, Music, Stars } from 'lucide-react';
 import { useEffect, useState, useRef } from 'react';
 
+import corazon from './assets/corazon.jpeg';
+import whatsapp from './assets/whatsapp-image.jpeg';
+import enamorados from './assets/enamorados.jpeg';
+import simplesCorazones from './assets/simples-corazones.mp3'
+
+
 // ==========================================
 // 💌 ZONA DE EDICIÓN (CAMBIA ESTO AQUÍ) 💌
 // ==========================================
@@ -10,7 +16,6 @@ const CONFIG = {
   tituloPrincipal: "Feliz Aniversario",
   fechaAniversario: "2024-12-25",
   cancionEspecial: "Fonseca - Simples Corazones",
-  audioUrl: "src/assets/Fonseca - Simples Corazones _ Colombia, Land of  Sabrosura.mp3",
   carta: `Desde el momento en que entraste en mi vida, todo cambió para mejor.
 No necesito un día especial para decirte lo mucho que te amo, pero hoy,
 en nuestro aniversario, quiero recordarte que eres mi persona favorita en el mundo.
@@ -19,11 +24,7 @@ Gracias por cada risa, por cada abrazo y por ser mi refugio.
 Espero que este pequeño detalle te saque una sonrisa.
 
 Te amo hoy y siempre.`,
-  fotos: [
-    "src/assets/corazon.jpeg",
-    "src/assets/WhatsApp Image 2025-12-24 at 6.50.10 PM.jpeg",
-    "src/assets/enamorados.jpeg"
-  ],
+fotos: [corazon, whatsapp, enamorados],
   firma: "Con todo mi amor, Yuli💗"
 };
 
@@ -220,7 +221,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-stone-50 text-slate-800">
-      <BackgroundAudio audioRef={audioRef} src={CONFIG.audioUrl} />
+      <BackgroundAudio audioRef={audioRef} src={simplesCorazones} />
       
       <Header foto={CONFIG.fotos[0]} titulo={CONFIG.tituloPrincipal} />
 
